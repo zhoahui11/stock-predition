@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
-df = pd.read_csv('中国联通.csv')
+df = pd.read_csv('.csv')
 column_name = 'close'
 column_data = df[column_name].values
 eemd = EEMD()
@@ -67,7 +67,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 num_epochs =
 for epoch in range(num_epochs):
     model.train()
-    train_loss = 0.0
+    train_loss = 
     for inputs, targets in train_loader:
         optimizer.zero_grad()
         outputs = model(inputs.unsqueeze(0))
